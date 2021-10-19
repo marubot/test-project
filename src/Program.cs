@@ -13,9 +13,9 @@ namespace ProjetoFinal
             identifier = new Identifier(inputString);
             
             if(identifier.ValidateIdentifier())
-                Console.WriteLine("A string " + identifier.inputCharacter + " é valida!");
+                Console.WriteLine("Valido");
             else 
-                Console.Write("Erro! String " + identifier.inputCharacter +  " inválida!");
+                Console.Write("Invalido");
          }
     }
 }

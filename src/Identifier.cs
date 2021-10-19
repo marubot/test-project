@@ -61,5 +61,12 @@ namespace ProjetoFinal
                 return false;
         }
 
+        public void OutputResult()
+        {
+            if (this.ValidateIdentifier())
+                Console.WriteLine("Valido");
+            else
+                Console.Write("Invalido");
+        }
     }
 }

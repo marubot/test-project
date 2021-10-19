@@ -11,11 +11,6 @@ namespace ProjetoFinal
             Console.WriteLine("Olá! Digite uma string a ser validada:");
             string inputString = Console.ReadLine(); 
             identifier = new Identifier(inputString);
-            
-            if(identifier.ValidateIdentifier())
-                Console.WriteLine("Valido");
-            else 
-                Console.Write("Invalido");
          }
     }
 }

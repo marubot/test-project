@@ -29,5 +29,41 @@ namespace IdentifierTests
 
             Assert.AreEqual(result, "Valido", "Assert falhou");
         }
+
+        [TestMethod]
+        public void TestInvalidClasses01()
+        {
+            Identifier identifier = new Identifier("2ba");
+            identifier.ValidateIdentifier();
+            identifier.OutputResult();
+
+            var result = strWriter.ToString().TrimEnd();
+
+            Assert.AreEqual(result, "Invalido", "Assert falhou");
+        }
+
+        [TestMethod]
+        public void TestInvalidClasses02()
+        {
+            Identifier identifier = new Identifier("2b*");
+            identifier.ValidateIdentifier();
+            identifier.OutputResult();
+
+            var result = strWriter.ToString().TrimEnd();
+
+            Assert.AreEqual(result, "Invalido", "Assert falhou");
+        }
+
+        [TestMethod]
+        public void TestInvalidClasses03()
+        {
+            Identifier identifier = new Identifier("abcdefghij");
+            identifier.ValidateIdentifier();
+            identifier.OutputResult();
+
+            var result = strWriter.ToString().TrimEnd();
+
+            Assert.AreEqual(result, "Invalido", "Assert falhou");
+        }
     }
 }

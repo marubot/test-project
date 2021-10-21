@@ -65,5 +65,17 @@ namespace IdentifierTests
 
             Assert.AreEqual(result, "Invalido", "Assert falhou");
         }
+
+        [TestMethod]
+        public void TestInvalidClasses04()
+        {
+            Identifier identifier = new Identifier("");
+            identifier.ValidateIdentifier();
+            identifier.OutputResult();
+
+            var result = strWriter.ToString().TrimEnd();
+
+            Assert.AreEqual(result, "Invalido", "Assert falhou");
+        }
     }
 }
